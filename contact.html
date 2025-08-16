@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: url('your-background.jpg') no-repeat center center/cover;
+        color: white;
+    }
+
+    /* Overlay */
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+        min-height: 100vh;
+        padding-bottom: 60px; /* Space for footer */
+    }
+
+    /* Navbar */
+    nav {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        display: inline-block;
+    }
+    nav a:hover {
+        background-color: black;
+        border-radius: 5px;
+    }
+
+    /* Contact Content */
+    .container {
+        padding: 40px;
+        max-width: 600px;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #FFD700;
+    }
+    p {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    textarea {
+        resize: none;
+        height: 100px;
+    }
+    button {
+        background-color: #FFD700;
+        color: black;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 15px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #ffdd33;
+    }
+
+    /* Footer */
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 15px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    footer p {
+        margin: 0;
+        font-size: 14px;
+        color: #ccc;
+    }
+</style>
+</head>
+<body>
+<div class="overlay">
+
+    <!-- Navbar (same as Certification page) -->
+    <nav>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="Education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="Internship.html"><i class="fa-solid fa-briefcase"></i> Internships</a>
+        <a href="project.html"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+        <a href="certification.html"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        <a href="skill.html"><i class="fa-solid fa-gears"></i> Skills</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+
+    <!-- Contact Form Content -->
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p><strong>Address:</strong> 12E,Kalakad,Tirunelveli,Tamilnadu,627501.</p>
+        <p><strong>Phone:</strong> +91 8015760129</p>
+        <p><strong>Email:</strong> balapreethi1615@gmail.com</p>
+
+        <form>
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Your Email</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Your Message</label>
+            <textarea placeholder="Write your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 BALA PREETHI M | All Rights Reserved</p>
+    </footer>
+
+</div>
+</body>
+</html>
