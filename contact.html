@@ -11,14 +11,12 @@
         color: white;
     }
 
-    /* Overlay */
     .overlay {
         background-color: rgba(0, 0, 0, 0.8);
         min-height: 100vh;
-        padding-bottom: 60px; /* Space for footer */
+        padding-bottom: 60px;
     }
 
-    /* Navbar */
     nav {
         background-color: rgba(0, 0, 0, 0.7);
         padding: 10px 0;
@@ -36,7 +34,6 @@
         border-radius: 5px;
     }
 
-    /* Contact Content */
     .container {
         padding: 40px;
         max-width: 600px;
@@ -87,7 +84,6 @@
         background-color: #ffdd33;
     }
 
-    /* Footer */
     footer {
         background-color: rgba(0, 0, 0, 0.8);
         text-align: center;
@@ -101,12 +97,23 @@
         font-size: 14px;
         color: #ccc;
     }
+
+   
+    #successMsg {
+        margin-top: 15px;
+        background: green;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        display: none;
+        color: white;
+        font-weight: bold;
+    }
 </style>
 </head>
 <body>
 <div class="overlay">
 
-    <!-- Navbar (same as Certification page) -->
     <nav>
         <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
         <a href="Education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
@@ -117,32 +124,65 @@
         <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
     </nav>
 
-    <!-- Contact Form Content -->
     <div class="container">
         <h1>Contact Me</h1>
-        <p><strong>Address:</strong> 12E,Kalakad,Tirunelveli,Tamilnadu,627501.</p>
+        <p><strong>Address:</strong> 12E, Kalakad, Tirunelveli, Tamil Nadu, 627501</p>
         <p><strong>Phone:</strong> +91 8015760129</p>
         <p><strong>Email:</strong> balapreethi1615@gmail.com</p>
 
-        <form>
+        <form id="contactForm">
             <label>Your Name</label>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" id="name" placeholder="Enter your name" required>
 
             <label>Your Email</label>
-            <input type="email" placeholder="Enter your email" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
 
             <label>Your Message</label>
-            <textarea placeholder="Write your message" required></textarea>
+            <textarea id="message" placeholder="Write your message" required></textarea>
 
             <button type="submit">Send Message</button>
         </form>
+
+        <div id="successMsg">Message Sent Successfully!</div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 BALA PREETHI M | All Rights Reserved</p>
     </footer>
 
 </div>
+
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+   
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    
+    console.log("📩 New Contact Message Received!");
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+    document.getElementById("successMsg").style.display = "block";
+
+    
+    document.getElementById("contactForm").reset();
+
+    setTimeout(() => {
+        document.getElementById("successMsg").style.display = "none";
+    }, 3000);
+});
+</script>
+
 </body>
 </html>
